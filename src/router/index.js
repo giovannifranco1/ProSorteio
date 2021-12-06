@@ -20,15 +20,22 @@ const routes = [
   },
   {
     path: '/admin',
-    name: 'Home',
+    name: 'Container',
     component: () =>
-      import ('../pages/Home.vue'),
+      import ('../components/admin/TheContainer.vue'),
     children: [{
-      path: '/admin/sorteios',
-      name: 'Create',
-      component: () =>
-        import ('../pages/sweepstake/Create.vue')
-    }]
+        path: '/admin/sorteio/create',
+        name: 'Create',
+        component: () =>
+          import ('../pages/sweepstake/Create.vue')
+      },
+      {
+        path: '/admin/sorteios',
+        name: 'Index',
+        component: () =>
+          import ('../pages/sweepstake/Index.vue')
+      },
+    ]
   }
 
 ]
