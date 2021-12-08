@@ -25,17 +25,65 @@ const routes = [
       import ('../components/admin/TheContainer.vue'),
     children: [{
         path: '/admin/sorteio/create',
-        name: 'Create',
+        name: 'CreateSweepstake',
         component: () =>
           import ('../pages/sweepstake/Create.vue')
       },
       {
         path: '/admin/sorteios',
-        name: 'Index',
+        name: 'IndexSweepstake',
         component: () =>
           import ('../pages/sweepstake/Index.vue')
       },
+      {
+        path: '/admin/categorias',
+        name: 'IndexCategory',
+        component: () =>
+          import ('../pages/category/Index.vue')
+      },
+      {
+        path: '/admin/categoria/create',
+        name: 'CreateCategory',
+        component: () =>
+          import ('../pages/category/Create.vue')
+      },
+      {
+        path: '/admin/membros',
+        name: 'IndexMember',
+        component: () =>
+          import ('../pages/member/Index.vue')
+      },
+      {
+        path: '/admin/membro/create',
+        name: 'CreateMember',
+        component: () =>
+          import ('../pages/member/Create.vue')
+      },
+      {
+        path: '/admin/membros/edit/:id',
+        name: 'EditMember',
+        component: () =>
+          import ('../pages/member/Edit.vue')
+      }
     ]
+  },
+  {
+    path: '/',
+    name: 'Home',
+    component: () =>
+      import ('../pages/Home.vue')
+  },
+  {
+    path: '/home/inscricao/:id',
+    name: 'Inscricao',
+    component: () =>
+      import ('../pages/Inscricao.vue')
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: () =>
+      import ('../pages/errors/NotFound.vue')
   }
 
 ]

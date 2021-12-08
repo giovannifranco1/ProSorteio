@@ -202,7 +202,8 @@ import { SearchIcon } from '@heroicons/vue/solid';
 const navigation = [
   { name: 'Home', href: '#', icon: HomeIcon, current: true },
   { name: 'Sorteios', href: '/admin/sorteios', icon: BookmarkAltIcon, current: false },
-  { name: 'Pessoas', href: '/admin/pessoas', icon: UsersIcon, current: false }
+  { name: 'Categorias', href: '/admin/categorias', icon: UsersIcon, current: false },
+  { name: 'Membros', href: '/admin/membros', icon: UsersIcon, current: false },
 ];
 const userNavigation = [
   { name: 'Your Profile', href: '#' },

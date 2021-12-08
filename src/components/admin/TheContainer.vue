@@ -8,7 +8,6 @@
         </div>
       </div>
     </template>
-
     <!-- Footer -->
     <template v-slot:footer>
       <Footer />

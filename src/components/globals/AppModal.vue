@@ -3,11 +3,10 @@
     <a id="openModal" @click.prevent="showModal" class="btn btn--modal cursor-pointer">
       <div class="flex justify-center items-center gap-x-1">
         <app-icon v-if="icon" :icon="icon" />
-        {{ icon ? name ? name : null : name || 'Abrir Modal' }}
+        {{ icon ? name ? name : null : name ?? 'Abrir Modal' }}
       </div>
     </a>
   </div>
-
   <div id="modal" class="modal z-50">
     <div :class="'w-11/12 max-w-' + size" class="modal__content p-1 rounded-lg">
       <div class="flex justify-end">
@@ -73,6 +72,7 @@ export default {
 .wrapper a {
   display: inline-block;
 }
+
 .modal {
   visibility: hidden;
   opacity: 0;

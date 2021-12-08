@@ -1,3 +1,9 @@
-        var test = 'sdsadsa';
+import axios from "axios";
+//import Cookie from "js-cookie";
 
-        console.log(test);
+const api = axios.create({
+  baseURL: 'https://localhost:5001/api/',
+});
+
+
+export default api;
